@@ -36,8 +36,8 @@ class PageEarth(ft.Container):
                             ),
                             CardEarth(
                                 page=self.page,
-                                body="Get Best offer now",
-                                header="Chicken fajitas",
+                                header="Get Best offer now",
+                                body="Chicken fajitas",
                                 image_src="chiken.png",
                             ),
                             CardEarth(

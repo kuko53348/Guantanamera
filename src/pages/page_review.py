@@ -41,8 +41,8 @@ class ImageReview(ft.Container):
                         # width=200,
                         # height=280,
                         border_radius=ft.border_radius.only(
-                            top_left=18,
-                            top_right=18,
+                            top_left=32,
+                            top_right=32,
                             bottom_left=0,
                             bottom_right=0,
                         ),
@@ -159,8 +159,8 @@ class ImageReview(ft.Container):
                         border_radius=ft.border_radius.only(
                             top_left=0,
                             top_right=0,
-                            bottom_left=18,
-                            bottom_right=18,
+                            bottom_left=32,
+                            bottom_right=32,
                         ),
                         blur=(12, 12),
                         gradient=ft.LinearGradient(
