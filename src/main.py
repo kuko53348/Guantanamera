@@ -153,8 +153,8 @@ class flet_box_app:
             "with this app you can try different types of activities and choose what the most enjoyable for you",
         )
 
-        # self.page.go("/")
-        self.page.go("/first_page")
+        self.page.go("/")
+        # self.page.go("/first_page")
         # self.page.go("/second_page")
 
     def on_route_change(self, page: object = None, route: str = str()) -> None:
