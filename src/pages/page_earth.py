@@ -18,7 +18,7 @@ class PageEarth(ft.Container):
             fit="cover",
             opacity=0.1,
         )
-        self.content = ft.Container(
+        self.content = ft.SafeArea(
             content=ft.Column(
                 scroll=ft.ScrollMode.ADAPTIVE,  # ADAPTIVE ,AUTO ,HIDDEN ,ALWAYS
                 alignment=ft.MainAxisAlignment.CENTER,

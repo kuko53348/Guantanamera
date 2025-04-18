@@ -14,11 +14,11 @@ class PageStarters(ft.Container):
         self.bgcolor = ft.Colors("transparent")
         self.ink_color = ft.Colors("yellow")
         self.image = ft.DecorationImage(
-            src="login.jpg",
+            src="presentation.jpg",
             fit="cover",
             opacity=0.1,
         )
-        self.content = ft.Container(
+        self.content = ft.SafeArea(
             content=ft.Column(
                 scroll=ft.ScrollMode.ADAPTIVE,  # ADAPTIVE ,AUTO ,HIDDEN ,ALWAYS
                 alignment=ft.MainAxisAlignment.CENTER,

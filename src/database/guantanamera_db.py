@@ -22,6 +22,17 @@ guantanamera_database: dict = {
     "Sea mixed": "A luxurious pairing of grilled lobster tail and fresh fish fillet, drizzled with citrusy mojo sauce. A seafood lover’s paradise on a plate.",
     "Guantanamera": "Our signature trio—grilled lobster, roasted chicken, and savory pork—served with classic Cuban sides. A feast fit for celebration.",
     "Special combo": "An extravagant combination of lobster, garlic shrimp, and tender pork, creating a symphony of flavors and textures. The pinnacle of Cuban indulgence.",
+    "Guantanamera restorant": """
+    **✨ You’re Invited to an Unforgettable Dining Experience! ✨**
+
+✔️ Savor mouthwatering Cuban dishes in a festive atmosphere.
+✔️ Sip on handcrafted cocktails (try the *piña colada*!).
+✔️ Enjoy live *son cubano* music and warm hospitality.
+
+*¡Nos vemos en Guantanamera!* Let’s toast to good food, great company, and Cuban vibes. 🎉🇨🇺
+
+*P.S. Ask for their *lechón asado* (roast pork) – it’s legendary!* 😉
+    """,
 }
 
 
