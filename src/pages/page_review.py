@@ -15,7 +15,6 @@ class ImageReview(ft.Container):
 
         self.expand = True
         self.image_page = self.page.session.get("current_image")
-        # self.bgcolor = ft.colors("grey900")
         self.alignment = ft.alignment.top_center
         self.padding = ft.padding.only(left=12, right=12, bottom=32, top=32)
         self.margin = ft.margin.only(left=0, right=0, bottom=0, top=0)

@@ -31,11 +31,9 @@ class CarStarter(ft.Container):
         self.content = ft.Container(
             # expand=True,
             margin=ft.margin.only(left=12, top=0, right=12, bottom=0),
-            # padding=ft.padding.only(left=12, top=12, right=12, bottom=12),
             border_radius=ft.border_radius.all(32),
             width=320,
             height=135,
-            # bgcolor=ft.Colors("grey900"),
             bgcolor=ft.Colors.with_opacity(opacity=0.25, color=ft.Colors("white")),
             shadow=ft.BoxShadow(
                 spread_radius=1,

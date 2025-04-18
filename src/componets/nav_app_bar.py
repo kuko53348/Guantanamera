@@ -158,6 +158,25 @@ class nav_drawer_widget(ft.NavigationDrawer):
                 alignment=ft.MainAxisAlignment.SPACE_AROUND,
                 horizontal_alignment=ft.CrossAxisAlignment.START,
                 controls=[
+                    (
+                        ft.Container()
+                        if not self.model_data == "Developer"
+                        else ft.Container(  #: [rotate,offset] , [scale,aspect_ratio] , [visible,disabled]
+                            border_radius=ft.border_radius.all(32),
+                            image=ft.DecorationImage(
+                                src="my_avatar.png",
+                                fit=ft.ImageFit.COVER,
+                                # opacity=0.02,
+                            ),  # NONE CONTAIN COVER FILL FIT_HEIGHT FIT_WIDTH SCALE_DOWN
+                            alignment=ft.alignment.center,
+                            height=150,
+                            width=150,
+                            # ink = True,
+                            ink_color=ft.colors("yellow"),
+                            expand=True,
+                            bgcolor=ft.colors("black12"),
+                        )
+                    ),
                     ft.Text(
                         size=12,
                         value=get_database(index=self.model_data),
@@ -206,28 +225,34 @@ class nav_app_bar(ft.AppBar):
 
     def __init__(
         self,
-        main_page: object = object(),
+        page: object = object(),
         visible: bool = False,
+        title: str = "",
+        icon_left: str = "coffee_rounded",
+        icon_right: str = "table_rows_rounded",
+        menu_drawer: object = None,
+        bgcolor: object = None,
     ):
         super().__init__()
-        self.page = main_page
+        self.page = page
         self.visible = visible
+
         self.title = ft.Text(
-            value="Restauración",
+            value=title,
         )
+        self.bgcolor = bgcolor
         self.leading = ft.Icon(
-            name=ft.Icons.COFFEE_ROUNDED,
+            name=ft.Icons(icon_left),
         )
         self.center_title = False
         self.actions = [
             ft.IconButton(
-                icon=ft.Icons.TABLE_ROWS_ROUNDED,
-                on_click=lambda e: self.check_menu_bar(main_page=self.page),
+                icon=ft.Icons(icon_right),
+                on_click=lambda e: self.check_menu_bar(menu_drawer=menu_drawer),
             ),
         ]
-        self.bgcolor = "TRANSPARENT"
-        self.page.update()
+        # self.page.update()
 
-    def check_menu_bar(self, main_page):
-        main_page.open(main_page.views[0].drawer)
-        main_page.update()
+    def check_menu_bar(self, menu_drawer: object = None):
+        self.page.open(menu_drawer)
+        self.page.update()

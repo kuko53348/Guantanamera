@@ -18,7 +18,7 @@ class PageCombinate(ft.Container):
             fit="cover",
             opacity=0.1,
         )
-        self.content = ft.SafeArea(
+        self.content = ft.Container(
             content=ft.Column(
                 scroll=ft.ScrollMode.ADAPTIVE,  # ADAPTIVE ,AUTO ,HIDDEN ,ALWAYS
                 alignment=ft.MainAxisAlignment.CENTER,

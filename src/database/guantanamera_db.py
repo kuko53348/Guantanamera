@@ -1,4 +1,31 @@
 guantanamera_database: dict = {
+    "Menu": """
+    -  Consume
+    -  Bannana Chips
+    -  Sauteed vegetables
+    -  Boiled food
+    -  Cold salad
+    -  Garlic shrimp
+    -  Perlan fish
+
+    -  Roasted chicken
+    -  Chicken fajitas
+    -  Pork fajitas
+    -  Pork steak
+    -  Fish fillet
+    -  Grilled lobster small size
+    -  Grilled lobster medium size
+    -  Grilled lobster bigger size
+    -  All in one plate
+
+    -  Cuban paella
+    -  Cuban mixed
+    -  Sea and land Chiken
+    -  Sea and land Pork
+    -  Sea mixed
+    -  Guantanamera
+    -  Special combo
+    """,
     "Consume": "A rich and flavorful Cuban consommé, slow-cooked with tender meats, fresh vegetables, and aromatic spices. A comforting bowl of warmth that delights the senses.",
     "Bannana Chips": "Crispy, golden banana chips lightly salted for the perfect balance of sweet and savory. A delicious and addictive snack that pairs well with any meal.",
     "Sauteed vegetables": "Fresh seasonal vegetables sautéed to perfection with garlic, olive oil, and a hint of citrus. A vibrant and healthy side dish bursting with flavor.",
@@ -34,25 +61,18 @@ guantanamera_database: dict = {
 *P.S. Ask for their *lechón asado* (roast pork) – it’s legendary!* 😉
     """,
     "App version": """
-    SERVICIOS GASTRONOMICOS:
+    GUANTANAMERA RESTAURANT:
 
         APP version: 0.8.0
         FLET SDK version: 0.27.6
         PYTHON version: 3.12.3
         FLET-BOX version: 0.1.3 (April 18, 2025)""",
     "Developer": """
+Dev:  Maenys Javier Quesada Reyes.
+Whatsapp:  +53 54047170
+
 Soy Desarrollador de software especializado en la creación de aplicaciones innovadoras. Con un enfoque en la calidad y la experiencia del usuario, aprovecha las tecnologías modernas para ofrecer soluciones eficientes.
-
-        DEV:   Maenys Javier Quesada Reyes
-        PHONE: +53 54047170.
-        EMAIL: kuko53348@gmail.com
-        YOUTUBE: https://www.youtube.com/@flet-box
-
-Si está interesado en crear o desplegar su propio Proyecto o Negocio y solo le hace falta crear su propia APP para promocionar vender etc.. o solo estás buscando crear un proyecto que tiene en mente y que sea multiplataforma.
-
-        [WINDOWS, ANDROID, IOS, LINUX ]
-
-Puede contactarme y desplegar sus ideas un solo proyecto desplegado en todas con solo contactarme.""",
+""",
 }
 
 

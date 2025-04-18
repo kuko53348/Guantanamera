@@ -180,11 +180,9 @@ class PageOne(ft.Container):
     # NONE CONTAIN COVER FILL FIT_HEIGHT FIT_WIDTH SCALE_DOWN
     def __init__(self, page: object = None) -> None:
         super().__init__()
-        # self.shadow = ft.BoxShadow(spread_radius=1, blur_radius=15, color=ft.colors('black'), offset=ft.Offset(0,0), blur_style=ft.ShadowBlurStyle.OUTER,)
         self.image = ft.DecorationImage(
             src="restaurante.png", fit=ft.ImageFit.COVER, opacity=0.15
         )
-        # self.margin = ft.margin.only(left=0, right=0, bottom=0, top=0)
         self.padding = ft.padding.only(left=0, right=0, bottom=64, top=64)
 
         self.page = page
@@ -206,15 +204,6 @@ class PageOne(ft.Container):
 
         # content of current widget
         self.content = ft.Column(
-            # tooltip = 'Column',
-            # tight = True,
-            # wrap = True,
-            # auto_scroll = True,
-            # height = 150,
-            # width = 150,
-            # ft.MainAxisAlignment START END CENTER SPACE_BETWEEN SPACE_AROUND SPACE_EVENLY
-            # ft.CrossAxisAlignment START END CENTER STRETCH BASELINE
-            # scroll = ft.ScrollMode.HIDDEN,
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             run_alignment=ft.CrossAxisAlignment.CENTER,

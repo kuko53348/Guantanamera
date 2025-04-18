@@ -1,6 +1,7 @@
 import flet as ft  # type: ignore
 
-from componets.nav_app_bar import nav_drawer_widget
+from componets.nav_app_bar import nav_app_bar, nav_drawer_widget
+from database.guantanamera_db import get_database
 from pages.page_combinate import PageCombinate
 from pages.page_earth import PageEarth
 from pages.page_one import PageOne
@@ -62,19 +63,19 @@ class page_app_view(ft.View):
             #     bgcolor=ft.Colors("grey900"),
             #     automatically_imply_leading=False,
             # )
-            self.floating_action_button_location = (
-                ft.FloatingActionButtonLocation.MINI_END_TOP
-            )
+
+            # self.floating_action_button_location = (
+            #     ft.FloatingActionButtonLocation.MINI_END_TOP
+            # )
             self.drawer = nav_drawer_widget(page=self.page)
             self.floating_action_button = ft.FloatingActionButton(
-                icon=ft.Icons.COFFEE_ROUNDED,
+                icon=ft.Icons.MENU_BOOK_ROUNDED,
                 bgcolor=ft.Colors("grey900"),
                 mini=True,
                 foreground_color=ft.Colors.AMBER_100,
                 disabled_elevation=True,
                 focus_elevation=0,
                 on_click=lambda _: self.open_drawer(),
-                offset=(-0.2, 0.4),
             )
 
             self.navigation_bar = ft.NavigationBar(
@@ -105,17 +106,61 @@ class page_app_view(ft.View):
                         icon=ft.Icons.FOOD_BANK_OUTLINED,
                         selected_icon=ft.Icons.FOOD_BANK_ROUNDED,
                     ),
-                    # ft.NavigationBarDestination(
-                    #     label="Menu",
-                    #     icon=ft.Icons.HOME,
-                    #     selected_icon=ft.Icons.FOOD_BANK_ROUNDED,
-                    # ),
                 ],
+            )
+            self.appbar = nav_app_bar(
+                page=self.page,
+                visible=True,
+                bgcolor=ft.Colors("grey900"),
+                icon_left="restaurant_menu_rounded",
+                icon_right="table_rows_rounded",
+                title="Guantanamera",
+                menu_drawer=self.drawer,
             )
 
     def open_drawer(self, drawer: object = None):
-        self.page.open(self.drawer)
-        self.page.update()
+        dlg_modal = ft.AlertDialog(
+            title=ft.Text(
+                value="Menu",
+                size=26,
+                text_align=ft.TextAlign.CENTER,
+                weight=ft.FontWeight.BOLD,
+                font_family="Consolas",
+            ),
+            # adaptive=True,
+            modal=True,
+            inset_padding=ft.padding.symmetric(vertical=16, horizontal=0),
+            content=ft.Container(
+                border_radius=ft.border_radius.only(
+                    top_left=32, top_right=32, bottom_left=32, bottom_right=32
+                ),
+                image=ft.DecorationImage(
+                    src="splash_android.png",
+                    fit=ft.ImageFit.COVER,
+                    opacity=0.02,
+                ),  # NONE CONTAIN COVER FILL FIT_HEIGHT FIT_WIDTH SCALE_DOWN
+                alignment=ft.alignment.center,
+                ink_color=ft.colors("yellow"),
+                bgcolor=ft.colors("black12"),
+                content=ft.Text(
+                    value=get_database(index="Menu"),
+                    expand=True,
+                    text_align=ft.TextAlign.LEFT,
+                    weight=ft.FontWeight.BOLD,
+                    font_family="Consolas",
+                ),
+            ),
+            actions=[
+                ft.ElevatedButton(
+                    text="Closet",
+                    bgcolor="red",
+                    on_click=lambda _: self.page.close(dlg_modal),
+                ),
+            ],
+            actions_alignment=ft.MainAxisAlignment.END,
+        )
+
+        self.page.open(dlg_modal)
 
     def change_screens(self, index_page: int = None):
         dynamic_index: int = index_page.selected_index
