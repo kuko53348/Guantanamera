@@ -26,19 +26,15 @@ class ImageReview(ft.Container):
         )
         # content of current widget
         self.content = ft.Container(
-            # shadow=ft.BoxShadow(
-            #     spread_radius=1,
-            #     blur_radius=15,
-            #     color=ft.Colors.BLACK,
-            #     offset=ft.Offset(0, 5),
-            # ),
+            blur=(16, 19),
+            width=720,
             content=ft.Column(
                 spacing=0,
                 controls=[
                     ft.Container(
                         expand=True,
                         # card_music_festival
-                        # width=200,
+                        # width=640,
                         # height=280,
                         border_radius=ft.border_radius.only(
                             top_left=32,
@@ -60,7 +56,7 @@ class ImageReview(ft.Container):
                             run_alignment=ft.CrossAxisAlignment.CENTER,
                             controls=[
                                 ft.Container(
-                                    blur=(12, 12),
+                                    blur=(16, 12),
                                     padding=ft.padding.only(
                                         left=12, right=12, bottom=12, top=12
                                     ),
@@ -162,7 +158,7 @@ class ImageReview(ft.Container):
                             bottom_left=32,
                             bottom_right=32,
                         ),
-                        blur=(12, 12),
+                        blur=(16, 19),
                         gradient=ft.LinearGradient(
                             begin=ft.alignment.top_center,
                             end=ft.alignment.bottom_center,
