@@ -1,5 +1,6 @@
 import flet as ft  # type: ignore
 
+from componets.nav_app_bar import nav_drawer_widget
 from pages.page_combinate import PageCombinate
 from pages.page_earth import PageEarth
 from pages.page_one import PageOne
@@ -55,6 +56,24 @@ class page_app_view(ft.View):
         ]
 
         if show_navigation:
+            # self.appbar = ft.AppBar(
+            #     title=ft.Text("Bottom AppBar Demo"),
+            #     center_title=True,
+            #     bgcolor=ft.Colors("grey900"),
+            #     automatically_imply_leading=False,
+            # )
+            self.floating_action_button_location = (
+                ft.FloatingActionButtonLocation.MINI_END_TOP
+            )
+            self.drawer = nav_drawer_widget(page=self.page)
+            self.floating_action_button = ft.FloatingActionButton(
+                icon=ft.Icons.ADD,
+                bgcolor=ft.Colors("grey900"),
+                mini=True,
+                on_click=lambda _: self.open_drawer(),
+                offset=(-0.2, 0.4),
+            )
+
             self.navigation_bar = ft.NavigationBar(
                 selected_index=index_page,
                 bgcolor=ft.Colors("grey900"),
@@ -83,8 +102,17 @@ class page_app_view(ft.View):
                         icon=ft.Icons.FOOD_BANK_OUTLINED,
                         selected_icon=ft.Icons.FOOD_BANK_ROUNDED,
                     ),
+                    # ft.NavigationBarDestination(
+                    #     label="Menu",
+                    #     icon=ft.Icons.HOME,
+                    #     selected_icon=ft.Icons.FOOD_BANK_ROUNDED,
+                    # ),
                 ],
             )
+
+    def open_drawer(self, drawer: object = None):
+        self.page.open(self.drawer)
+        self.page.update()
 
     def change_screens(self, index_page: int = None):
         dynamic_index: int = index_page.selected_index
@@ -125,8 +153,8 @@ class flet_box_app:
             "with this app you can try different types of activities and choose what the most enjoyable for you",
         )
 
-        self.page.go("/")
-        # self.page.go("/first_page")
+        # self.page.go("/")
+        self.page.go("/first_page")
         # self.page.go("/second_page")
 
     def on_route_change(self, page: object = None, route: str = str()) -> None:
