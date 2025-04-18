@@ -1,5 +1,7 @@
 import flet as ft
 
+from database.guantanamera_db import get_database
+
 
 class nav_drawer_widget(ft.NavigationDrawer):
 
@@ -10,6 +12,13 @@ class nav_drawer_widget(ft.NavigationDrawer):
         "surface_tint_color",
         "indicator_color",
     ]
+
+    dict_documentation: dict = {
+        "0": "Gallery",
+        "1": "Documentacion",
+        "2": "Developer",
+        "3": "App version",
+    }
 
     def __init__(self, page: object = None):
         super().__init__()
@@ -91,11 +100,10 @@ class nav_drawer_widget(ft.NavigationDrawer):
     def handle_change(self, index_data):
         # MODEL OF DATA SELECTED
         # self.all_index_database = "my_doc"
-        # self.tmp_index_data = index_data.data
-        # self.model_data = self.dict_documentation.get(self.tmp_index_data)
+        self.model_data = self.dict_documentation.get(index_data.data)
 
         dlg_modal = ft.AlertDialog(
-            # title=ft.Text(self.model_data),
+            title=ft.Text(value=self.model_data),
             # adaptive=True,
             modal=True,
             inset_padding=ft.padding.symmetric(vertical=12, horizontal=8),
@@ -106,7 +114,7 @@ class nav_drawer_widget(ft.NavigationDrawer):
                 controls=[
                     ft.Text(
                         size=12,
-                        # value=self.all_index_database(arg=self.model_data),
+                        value=get_database(index=self.model_data),
                         text_align=ft.TextAlign.LEFT,
                     ),
                 ],
