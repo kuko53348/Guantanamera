@@ -2,19 +2,6 @@ import flet as ft
 
 
 class nav_drawer_widget(ft.NavigationDrawer):
-    """
-    CLASS NAV DRAWER:
-
-    ITS WIDGET DRAWER ONLY
-    """
-
-    dict_documentation: dict = {
-        "0": "Introduccion",
-        "1": "Agradecimientos",
-        "2": "Documentacion",
-        "3": "Desarrollador",
-        "4": "App version",
-    }
 
     __slots__ = [
         "shadow_color",
@@ -84,12 +71,12 @@ class nav_drawer_widget(ft.NavigationDrawer):
                 selected_icon=ft.Icons.CAMERA,
             ),
             ft.NavigationDrawerDestination(
-                label="Documentación",
+                label="Documentation",
                 icon=ft.Icons.AUTO_STORIES_OUTLINED,
                 selected_icon=ft.Icon(ft.Icons.AUTO_STORIES),
             ),
             ft.NavigationDrawerDestination(
-                label="Desarrollador",
+                label="Developer",
                 icon=ft.Icon(ft.Icons.CLEAN_HANDS_OUTLINED),
                 selected_icon=ft.Icons.CLEAN_HANDS,
             ),
@@ -126,7 +113,7 @@ class nav_drawer_widget(ft.NavigationDrawer):
             ),
             actions=[
                 ft.ElevatedButton(
-                    text="Cerrar",
+                    text="Closet",
                     bgcolor="red",
                     on_click=lambda _: self.page.close(dlg_modal),
                 ),

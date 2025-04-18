@@ -67,9 +67,12 @@ class page_app_view(ft.View):
             )
             self.drawer = nav_drawer_widget(page=self.page)
             self.floating_action_button = ft.FloatingActionButton(
-                icon=ft.Icons.ADD,
+                icon=ft.Icons.COFFEE_ROUNDED,
                 bgcolor=ft.Colors("grey900"),
                 mini=True,
+                foreground_color=ft.Colors.AMBER_100,
+                disabled_elevation=True,
+                focus_elevation=0,
                 on_click=lambda _: self.open_drawer(),
                 offset=(-0.2, 0.4),
             )
