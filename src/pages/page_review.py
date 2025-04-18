@@ -179,7 +179,7 @@ class ImageReview(ft.Container):
                                 ft.Text(
                                     text_align=ft.TextAlign.LEFT,
                                     value="Description",
-                                    size=16,
+                                    size=26,
                                     weight=ft.FontWeight.W_900,
                                     color=ft.Colors("white"),
                                 ),
@@ -188,7 +188,7 @@ class ImageReview(ft.Container):
                                     text_align=ft.TextAlign.LEFT,
                                     value=self.page.session.get("description_text"),
                                     weight=ft.FontWeight.W_600,
-                                    size=11,
+                                    size=16,
                                     color=ft.Colors("grey600"),
                                 ),
                                 ft.Container(
