@@ -34,40 +34,27 @@ guantanamera_database: dict = {
 *P.S. Ask for their *lechón asado* (roast pork) – it’s legendary!* 😉
     """,
     "App version": """
-        SERVICIOS GASTRONOMICOS:
+    SERVICIOS GASTRONOMICOS:
 
         APP version: 0.8.0
         FLET SDK version: 0.27.6
         PYTHON version: 3.12.3
-        FLET-BOX version: 0.1.3 (April 18, 2025)
-
-        MADE WITH FLET-BOX GUI
-
-        https://github.com/kuko53348/Guantanamera.git
-
-        OPEN SOURCE LICENCE:
-
-        Apache License
-        Version 2.0, January 2004
-        http://www.apache.org/licenses/
-""",
+        FLET-BOX version: 0.1.3 (April 18, 2025)""",
     "Developer": """
 Soy Desarrollador de software especializado en la creación de aplicaciones innovadoras. Con un enfoque en la calidad y la experiencia del usuario, aprovecha las tecnologías modernas para ofrecer soluciones eficientes.
 
-            DEV:   Maenys Javier Quesada Reyes
-            PHONE: +53 54047170.
-            EMAIL: kuko53348@gmail.com
-
+        DEV:   Maenys Javier Quesada Reyes
+        PHONE: +53 54047170.
+        EMAIL: kuko53348@gmail.com
+        YOUTUBE: https://www.youtube.com/@flet-box
 
 Si está interesado en crear o desplegar su propio Proyecto o Negocio y solo le hace falta crear su propia APP para promocionar vender etc.. o solo estás buscando crear un proyecto que tiene en mente y que sea multiplataforma.
 
-            [WINDOWS, ANDROID, IOS, LINUX ]
+        [WINDOWS, ANDROID, IOS, LINUX ]
 
-Puede contactarme y desplegar sus ideas un solo proyecto desplegado en todas con solo contactarme.
-
-""",
+Puede contactarme y desplegar sus ideas un solo proyecto desplegado en todas con solo contactarme.""",
 }
 
 
 def get_database(index: str = ""):
-    return guantanamera_database.get(index, "No exit")
+    return guantanamera_database.get(index, "")
