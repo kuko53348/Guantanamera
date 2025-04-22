@@ -14,7 +14,7 @@ class PageStarters(ft.Container):
         self.bgcolor = ft.Colors("transparent")
         self.ink_color = ft.Colors("yellow")
         self.image = ft.DecorationImage(
-            src="presentation.jpg",
+            src="shrimp.png",
             fit="cover",
             opacity=0.1,
         )
@@ -29,11 +29,11 @@ class PageStarters(ft.Container):
                         # columns=2,
                         alignment=ft.MainAxisAlignment.CENTER,
                         controls=[
-                            CarStarter(
-                                page=self.page,
-                                header="Get Best offer now",
-                                body="Consume",
-                            ),
+                            # CarStarter(
+                            #     page=self.page,
+                            #     header="Get Best offer now",
+                            #     body="Consume",
+                            # ),
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
@@ -43,13 +43,19 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Sauteed vegetables",
+                                body="French fries",
+                                image_src="papasfritas.png",
                             ),
-                            CarStarter(
-                                page=self.page,
-                                header="Get Best offer now",
-                                body="Boiled food",
-                            ),
+                            # CarStarter(
+                            #     page=self.page,
+                            #     header="Get Best offer now",
+                            #     body="Sauteed vegetables",
+                            # ),
+                            # CarStarter(
+                            #     page=self.page,
+                            #     header="Get Best offer now",
+                            #     body="Boiled food",
+                            # ),
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",

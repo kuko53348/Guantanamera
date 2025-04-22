@@ -48,7 +48,7 @@ class fletbox_ui_0(ft.Container):
                             enable_interactive_selection=True,
                             opacity=1.0,
                             selection_cursor_width=2.0,
-                            size=42,
+                            size=36,
                             value="Guantanamera",
                             visible=True,
                             weight=ft.FontWeight.W_900,
@@ -58,7 +58,7 @@ class fletbox_ui_0(ft.Container):
                             enable_interactive_selection=True,
                             opacity=1.0,
                             selection_cursor_width=2.0,
-                            size=36,
+                            size=28,
                             value="Restaurant",
                             visible=True,
                             weight=ft.FontWeight.W_900,
@@ -69,7 +69,7 @@ class fletbox_ui_0(ft.Container):
                             enable_interactive_selection=True,
                             opacity=1.0,
                             selection_cursor_width=2.0,
-                            size=14,
+                            size=13,
                             weight=ft.FontWeight.W_600,
                             value=get_database("Guantanamera restorant"),
                             visible=True,
@@ -181,7 +181,7 @@ class PageOne(ft.Container):
     def __init__(self, page: object = None) -> None:
         super().__init__()
         self.image = ft.DecorationImage(
-            src="restaurante.png", fit=ft.ImageFit.COVER, opacity=0.15
+            src="guantanamera.png", fit=ft.ImageFit.COVER, opacity=0.15
         )
         self.padding = ft.padding.only(left=0, right=0, bottom=64, top=64)
 

@@ -82,15 +82,15 @@ class nav_drawer_widget(ft.NavigationDrawer):
                 margin=ft.margin.all(0),
                 # expand        = True,
                 alignment=ft.alignment.center,
-                height=340,
+                height=380,
                 border_radius=ft.border_radius.only(
                     top_left=16, top_right=18, bottom_left=48, bottom_right=100
                 ),
                 border=ft.border.all(4, ft.Colors.SURFACE),
                 content=ft.Image(
-                    src="guantanamera_door.png",
+                    src="gauntanamera_door.png",
                     fit=ft.ImageFit.COVER,
-                    opacity=0.80,
+                    # opacity=0.80,
                     expand=True,
                     scale=1.2,
                 ),

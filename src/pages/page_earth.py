@@ -14,7 +14,7 @@ class PageEarth(ft.Container):
         self.bgcolor = ft.Colors("transparent")
         self.ink_color = ft.Colors("yellow")
         self.image = ft.DecorationImage(
-            src="login.jpg",
+            src="login.png",
             fit="cover",
             opacity=0.1,
         )
@@ -33,6 +33,7 @@ class PageEarth(ft.Container):
                                 page=self.page,
                                 header="Get Best offer now",
                                 body="Roasted chicken",
+                                image_src="roastchicken.png",
                             ),
                             CardEarth(
                                 page=self.page,
@@ -44,13 +45,13 @@ class PageEarth(ft.Container):
                                 page=self.page,
                                 header="Get Best offer now",
                                 body="Pork fajitas",
-                                image_src="chiken.png",
+                                image_src="porkchajitas.png",
                             ),
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
                                 body="Pork steak",
-                                image_src="steak.png",
+                                image_src="porksteak.jpg",
                             ),
                         ],
                     ),
