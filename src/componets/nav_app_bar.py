@@ -51,14 +51,6 @@ class RichText(ft.Row):
 
 class nav_drawer_widget(ft.NavigationDrawer):
 
-    __slots__ = [
-        "shadow_color",
-        "elevation",
-        "bgcolor",
-        "surface_tint_color",
-        "indicator_color",
-    ]
-
     dict_documentation: dict = {
         "0": "Gallery",
         "1": "Documentacion",
@@ -74,13 +66,10 @@ class nav_drawer_widget(ft.NavigationDrawer):
         self.bgcolor = ("surface,0.96",)
         self.surface_tint_color = "black,0.4"
         self.indicator_color = "grey,0.25"
-
-    def build(self):
         self.controls = [
             ft.Container(
                 padding=ft.padding.all(0),
                 margin=ft.margin.all(0),
-                # expand        = True,
                 alignment=ft.alignment.center,
                 height=380,
                 border_radius=ft.border_radius.only(
@@ -145,7 +134,6 @@ class nav_drawer_widget(ft.NavigationDrawer):
 
     def handle_change(self, index_data):
         # MODEL OF DATA SELECTED
-        # self.all_index_database = "my_doc"
         self.model_data = self.dict_documentation.get(index_data.data)
 
         dlg_modal = ft.AlertDialog(
@@ -251,7 +239,6 @@ class nav_app_bar(ft.AppBar):
                 on_click=lambda e: self.check_menu_bar(menu_drawer=menu_drawer),
             ),
         ]
-        # self.page.update()
 
     def check_menu_bar(self, menu_drawer: object = None):
         self.page.open(menu_drawer)
