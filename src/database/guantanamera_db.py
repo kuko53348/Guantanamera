@@ -63,9 +63,9 @@ guantanamera_database: dict = {
     "App version": """
     GUANTANAMERA RESTAURANT:
 
-        APP version: 0.8.0
+        APP version: 1.1.0
         FLET SDK version: 0.27.6
-        PYTHON version: 3.12.3
+        PYTHON version: 3.12.8
         FLET-BOX version: 0.1.3 (April 18, 2025)""",
     "Developer": """
 Dev:  Maenys Javier Quesada Reyes.
