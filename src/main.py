@@ -55,6 +55,7 @@ class page_app_view(ft.View):
                 else content
             ),
         ]
+        self.drawer = nav_drawer_widget(page=self.page)
 
         if show_navigation:
             # self.appbar = ft.AppBar(
@@ -67,7 +68,6 @@ class page_app_view(ft.View):
             # self.floating_action_button_location = (
             #     ft.FloatingActionButtonLocation.MINI_END_TOP
             # )
-            self.drawer = nav_drawer_widget(page=self.page)
             self.floating_action_button = ft.FloatingActionButton(
                 icon=ft.Icons.MENU_BOOK_ROUNDED,
                 bgcolor=ft.Colors("grey900"),
