@@ -1,81 +1,89 @@
-# Guantanamera app
+# Guantanamera — Cuban Cuisine App Powered by Flet & Flet-Box GUI
 
-## Run the app
+## Overview
 
-### uv
+Guantanamera brings the spirit of Cuban gastronomy straight to your device.
+Built on Flet’s declarative Python UI and enhanced with Flet-Box for modular panels, this app delivers a smooth, visually rich experience that showcases the restaurant’s menu and story.
 
-Run as a desktop app:
+---
 
-```
-uv run flet run
-```
+## Key Highlights
 
-Run as a web app:
+- Declarative, cross-platform GUI built in Python with Flet
+- Modular layout and dynamic panels courtesy of Flet-Box
+- Embedded YouTube promo and Instagram QR integration
+- Ready-to-use APK for Android with zero-login demo
+- Designed for developers, marketers, and food lovers alike
 
-```
-uv run flet run --web
-```
+---
 
-### Poetry
+## Demo Video
 
-Install dependencies from `pyproject.toml`:
+[![Watch the Promo](https://img.youtube.com/vi/d_ddYKqxD_0/0.jpg)](https://youtu.be/d_ddYKqxD_0?si=zhNJmlrh7roLjUdf)
 
-```
-poetry install
-```
+Click the image to experience Guantanamera’s story in motion.
 
-Run as a desktop app:
+---
 
-```
-poetry run flet run
-```
+## Location & Social
 
-Run as a web app:
+**Guantanamera Restaurant**
+Centro de Convenciones, Plaza Américas, Varadero, Cuba
 
-```
-poetry run flet run --web
-```
+Follow us on Instagram for daily culinary inspiration:
+https://www.instagram.com/guantanamera397
 
-For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/getting-started/).
+---
 
-## Build the app
+## Feature Breakdown
 
-### Android
+| Component         | Technology  | Description                                                 |
+| ----------------- | ----------- | ----------------------------------------------------------- |
+| User Interface    | Flet        | Declarative Python UI, mobile-friendly by default           |
+| Panel System      | Flet-Box    | Reusable, collapsible panels for menu, details, and gallery |
+| Multimedia Embed  | YouTube     | Full-screen promo video with lazy-load thumbnail            |
+| Social & QR Codes | Flet-Box QR | Instant links to Instagram and YouTube                      |
+| Deployment        | APK / CLI   | One-step APK build, CLI runner for Windows/macOS/Linux      |
 
-```
-flet build apk -v
-```
+---
 
-For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
+## Getting Started
 
-### iOS
+1. Clone the repository:
+   `git clone https://github.com/kuko53348/Guantanamera.git`
+2. Run the demo:
+   `flet run`
+3. Scan the QR code in-app to follow us on Instagram and watch more videos.
 
-```
-flet build ipa -v
-```
+---
 
-For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
+## APK Download
 
-### macOS
+Grab the Android APK for instant hands-on:
+https://drive.google.com/drive/folders/1S9IjowvYYxMH6BZPTiVlEHvhspfRCT-p
 
-```
-flet build macos -v
-```
+---
 
-For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
+## Developer & Marketer Notes
 
-### Linux
+Guantanamera is more than a menu showcase—it’s a case study in how Flet and Flet-Box unlock rapid GUI development without sacrificing polish. Use this app to:
 
-```
-flet build linux -v
-```
+- Prototype restaurant and retail experiences
+- Learn Flet’s reactive paradigm with real-world data
+- Extend panels, widgets, and themes via plugin-ready modules
+- Market your own brand with embedded social hooks
 
-For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
+---
 
-### Windows
+## Roadmap & Contribution
 
-```
-flet build windows -v
-```
+We welcome contributions that amplify its modularity and reach. Planned features:
 
-For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
+- Localization (Spanish, English, Portuguese)
+- Enhanced analytics with in-app event tracking
+- Theme engine for custom branding
+- Extra Flet-Box widgets—accordions, carousels, data grids
+
+Join us on GitHub and help shape the future of Python-powered GUI.
+
+---
