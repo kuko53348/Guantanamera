@@ -19,6 +19,7 @@ class PageEarth(ft.Container):
             opacity=0.1,
         )
         self.content = ft.Container(
+            padding=ft.padding.only(left=0, right=0, bottom=8, top=0),
             content=ft.Column(
                 scroll=ft.ScrollMode.ADAPTIVE,  # ADAPTIVE ,AUTO ,HIDDEN ,ALWAYS
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -34,31 +35,31 @@ class PageEarth(ft.Container):
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Roasted chicken",
+                                body="Roasted Chicken",
                                 image_src="roast_chicken.jpeg",
                             ),
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Chicken fajitas",
+                                body="Chicken Fajitas",
                                 image_src="chicken_fajitas.jpeg",
                             ),
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Pork fajitas",
+                                body="Pork Fajitas",
                                 image_src="pork_fajita.jpeg",
                             ),
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Pork steak",
+                                body="Pork Steak",
                                 image_src="pork_steak.jpeg",
                             ),
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Pork Costillas",
+                                body="Pork Ribs",
                                 image_src="pork_costillas.jpeg",
                             ),
                         ],

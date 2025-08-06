@@ -19,6 +19,7 @@ class PageCombinate(ft.Container):
             opacity=0.1,
         )
         self.content = ft.Container(
+            padding=ft.padding.only(left=0, right=0, bottom=8, top=0),
             content=ft.Column(
                 scroll=ft.ScrollMode.ADAPTIVE,  # ADAPTIVE ,AUTO ,HIDDEN ,ALWAYS
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -32,28 +33,28 @@ class PageCombinate(ft.Container):
                             CardCombinade(
                                 page=self.page,
                                 header="Cuban paella",
-                                body="All in one plate: Lobster,Mushroom,Calamar,Octupus",
+                                body="All in One Plate: Cuban Paella",
                                 extra="All in one plate",
                                 image_src="paella_mixta.jpeg",
                             ),
                             CardCombinade(
                                 page=self.page,
-                                header="Cuban paella",
-                                body="All in one plate: Lobster,Mushroom,Calamar,Octupus",
+                                header="Cuban mix sea",
+                                body="All in One Plate: Lobster, Fish Fillet",
                                 extra="Lobster fish fillet",
                                 image_src="lobster_fish.jpeg",
                             ),
                             CardCombinade(
                                 page=self.page,
-                                header="Cuban paella",
-                                body="All in one plate: Lobster,Mushroom,Calamar,Octupus",
+                                header="Cuban mix sea",
+                                body="All in One Plate: Lobster, Shrimp",
                                 extra="Lobster shrimp",
                                 image_src="lobster_shrimp.jpeg",
                             ),
                             CardCombinade(
                                 page=self.page,
-                                header="Cuban paella",
-                                body="All in one plate: Lobster,Mushroom,Calamar,Octupus",
+                                header="Cuban mix sea and earth",
+                                body="All in One Plate: Lobster, Fish, Pork",
                                 extra="Lobster fish pork",
                                 image_src="lobster_fish_pork.jpeg",
                             ),

@@ -19,6 +19,7 @@ class PageSea(ft.Container):
             opacity=0.1,
         )
         self.content = ft.Container(
+            padding=ft.padding.only(left=0, right=0, bottom=8, top=0),
             content=ft.Column(
                 scroll=ft.ScrollMode.ADAPTIVE,  # ADAPTIVE ,AUTO ,HIDDEN ,ALWAYS
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -34,7 +35,7 @@ class PageSea(ft.Container):
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Fish fillet",
+                                body="Fish Fillet",
                                 image_src="fish_fillet.jpeg",
                             ),
                             ft.Row(
@@ -44,13 +45,13 @@ class PageSea(ft.Container):
                                     CardEarth(
                                         page=self.page,
                                         header="Get Best offer now",
-                                        body="Wheels Fish",
+                                        body="Fish Wheels",
                                         image_src="fish_weel.jpeg",
                                     ),
                                     CardEarth(
                                         page=self.page,
                                         header="Get Best offer now",
-                                        body="Fish on plate",
+                                        body="Fish on Plate",
                                         image_src="fish_on_plate.jpeg",
                                     ),
                                 ],
@@ -62,13 +63,13 @@ class PageSea(ft.Container):
                                     CardEarth(
                                         page=self.page,
                                         header="Get Best offer now",
-                                        body="Paella\n",
+                                        body="Cuban Paella",
                                         image_src="paella.jpeg",
                                     ),
                                     CardEarth(
                                         page=self.page,
                                         header="Get Best offer now",
-                                        body="Garlic shrimp",
+                                        body="Garlic Shrimp",
                                         image_src="garlic_shrimp.jpeg",
                                     ),
                                 ],
@@ -76,13 +77,13 @@ class PageSea(ft.Container):
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Grilled lobster small size",
+                                body="Grilled Lobster (Medium Size)",
                                 image_src="lobster.jpeg",
                             ),
                             CardEarth(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Grilled lobster big size",
+                                body="Grilled Lobster (Big Size)",
                                 image_src="grillet_lobster.jpeg",
                             ),
                         ],

@@ -1,6 +1,6 @@
 import flet as ft  # type: ignore
 
-from componets.nav_app_bar import nav_app_bar, nav_drawer_widget
+from componets.nav_app_bar import RichText, nav_app_bar, nav_drawer_widget
 from database.guantanamera_db import get_database
 from pages.page_combinate import PageCombinate
 from pages.page_earth import PageEarth
@@ -69,7 +69,7 @@ class page_app_view(ft.View):
             # )
             self.drawer = nav_drawer_widget(page=self.page)
             self.floating_action_button = ft.FloatingActionButton(
-                icon=ft.Icons.MENU_BOOK_ROUNDED,
+                icon=ft.Icons.QR_CODE_SCANNER_OUTLINED,
                 bgcolor=ft.Colors("grey900"),
                 mini=True,
                 foreground_color=ft.Colors.AMBER_100,
@@ -121,7 +121,7 @@ class page_app_view(ft.View):
     def open_drawer(self, drawer: object = None):
         dlg_modal = ft.AlertDialog(
             title=ft.Text(
-                value="Menu",
+                value="We are in Instagram",
                 size=26,
                 text_align=ft.TextAlign.CENTER,
                 weight=ft.FontWeight.BOLD,
@@ -129,28 +129,38 @@ class page_app_view(ft.View):
             ),
             # adaptive=True,
             modal=True,
-            inset_padding=ft.padding.symmetric(vertical=16, horizontal=0),
+            inset_padding=ft.padding.symmetric(vertical=8, horizontal=0),
             content=ft.Container(
                 border_radius=ft.border_radius.only(
-                    top_left=32, top_right=32, bottom_left=32, bottom_right=32
+                    top_left=24,
+                    top_right=24,
+                    bottom_left=24,
+                    bottom_right=24,
                 ),
+                height=280,
                 image=ft.DecorationImage(
-                    src="splash_android.jpeg",
+                    src="qr_code.jpeg",
                     fit=ft.ImageFit.COVER,
-                    opacity=0.02,
+                    # opacity=0.02,
                 ),  # NONE CONTAIN COVER FILL FIT_HEIGHT FIT_WIDTH SCALE_DOWN
                 alignment=ft.alignment.center,
                 ink_color=ft.Colors("yellow"),
                 bgcolor=ft.Colors("black12"),
-                content=ft.Text(
-                    value=get_database(index="Menu"),
-                    expand=True,
-                    text_align=ft.TextAlign.LEFT,
-                    weight=ft.FontWeight.BOLD,
-                    font_family="Consolas",
-                ),
             ),
             actions=[
+                RichText(
+                    page=self.page,
+                    icon="monochrome_photos_rounded",
+                    text="OPEN INSTAGRAM",
+                    text_link="https://www.instagram.com/guantanamera397?igsh=YzljYTk1ODg3Zg==",
+                ),
+                ft.Container(height=8),
+                RichText(
+                    page=self.page,
+                    icon="cloud_download_rounded",
+                    text="DOWNLOAD APK",
+                    text_link="https://drive.google.com/drive/folders/1S9IjowvYYxMH6BZPTiVlEHvhspfRCT-p",
+                ),
                 ft.ElevatedButton(
                     text="Closet",
                     bgcolor="red",
@@ -184,8 +194,8 @@ class flet_box_app:
         self.page.window.top = 3
         self.page.padding = 0
         self.page.spacing = 0
-        self.page.window.height = 720
-        self.page.window.width = 340
+        # self.page.window.height = 720
+        # self.page.window.width = 340
         self.page.on_route_change = lambda _: self.on_route_change(
             page=self.page,
             route="/",
@@ -201,8 +211,8 @@ class flet_box_app:
             "with this app you can try different types of activities and choose what the most enjoyable for you",
         )
 
-        # self.page.go("/")
-        self.page.go("/first_page")
+        self.page.go("/")
+        # self.page.go("/first_page")
         # self.page.go("/second_page")
 
     def on_route_change(self, page: object = None, route: str = str()) -> None:

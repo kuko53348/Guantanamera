@@ -19,7 +19,7 @@ class PageStarters(ft.Container):
             opacity=0.1,
         )
         self.content = ft.Container(
-            padding=ft.padding.only(left=0, right=0, bottom=0, top=0),
+            padding=ft.padding.only(left=0, right=0, bottom=8, top=0),
             content=ft.Column(
                 scroll=ft.ScrollMode.ADAPTIVE,  # ADAPTIVE ,AUTO ,HIDDEN ,ALWAYS
                 alignment=ft.MainAxisAlignment.CENTER,
@@ -33,7 +33,7 @@ class PageStarters(ft.Container):
                                 page=self.page,
                                 # show_message=True,
                                 header="Get Best offer now",
-                                body="Tamales",
+                                body="Cuban Tamals",
                                 image_src="tamales.jpeg",
                                 text_size=24,
                                 card_size=140,
@@ -47,13 +47,13 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Cold salad",
+                                body="Cold Salad",
                                 image_src="cold_salad_coctail.jpeg",
                             ),
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Shrimp coctail",
+                                body="Shrimp Cocktail",
                                 image_src="cold_salad.jpeg",
                             ),
                         ],
@@ -64,13 +64,13 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Atun coctail",
+                                body="Tuna Cocktail",
                                 image_src="atun_cold_salad.jpeg",
                             ),
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Chicken coctail",
+                                body="Chicken Cocktail",
                                 image_src="chiken_salad.jpeg",
                             ),
                         ],
@@ -81,7 +81,7 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Fried potatoes",
+                                body="Fried Potatoes",
                                 image_src="fried_potatoes.jpeg",
                                 text_size=12,
                                 body_size=16,
@@ -99,7 +99,7 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="banana Chips",
+                                body="Banana Chips",
                                 image_src="banana_chips.jpeg",
                                 text_size=12,
                                 body_size=16,
@@ -113,7 +113,7 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Garlic shrimp",
+                                body="Garlic Shrimp",
                                 image_src="camarones.jpeg",
                                 body_size=18,
                                 card_size=125,
@@ -142,7 +142,7 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Atun tostones ",
+                                body="Tuna Tostones ",
                                 image_src="tostones_atun.jpeg",
                                 body_size=18,
                                 card_size=125,
@@ -155,7 +155,7 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Vegetal salad",
+                                body="Vegetable Salad",
                                 image_src="ensalada_vegetales.jpeg",
                                 body_size=18,
                                 card_size=125,
@@ -163,7 +163,7 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Fruts salad",
+                                body="Fruit Salad",
                                 image_src="ensalada_frutas.jpeg",
                                 body_size=18,
                                 card_size=125,
@@ -177,7 +177,7 @@ class PageStarters(ft.Container):
                                 page=self.page,
                                 show_message=True,
                                 header="Get Best offer now",
-                                body="Pork fajita",
+                                body="Pork Fajita",
                                 image_src="pork_fajita_picadera.jpeg",
                                 text_size=24,
                                 card_size=140,
@@ -191,13 +191,13 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Crokets on plate",
+                                body="Croquettes on Plate",
                                 image_src="croquetas.jpeg",
                             ),
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Boiled food",
+                                body="Boiled Food",
                                 image_src="salted_salad.jpeg",
                             ),
                         ],
@@ -208,13 +208,13 @@ class PageStarters(ft.Container):
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Hamburger with cheeze",
+                                body="Hamburger with Cheese",
                                 image_src="hamburger.jpeg",
                             ),
                             CarStarter(
                                 page=self.page,
                                 header="Get Best offer now",
-                                body="Ham",
+                                body="Ham slices",
                                 image_src="jam.jpeg",
                             ),
                         ],
